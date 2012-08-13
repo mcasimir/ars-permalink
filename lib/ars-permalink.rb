@@ -41,4 +41,4 @@ module ArsPermalink
   
 end
 
-ActiveRecord::Base.send :include, Permalink
+ActiveRecord::Base.send :include, ArsPermalink
