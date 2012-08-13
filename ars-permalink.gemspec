@@ -22,7 +22,8 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "ars-permalink.gemspec",
-    "lib/ars-permalink.rb"
+    "lib/ars-permalink.rb",
+    "lib/generators/ars_permalink/install_generator.rb"
   ]
   s.homepage = "http://github.com/mcasimir/kaminari-bootstrap"
   s.licenses = ["MIT"]
