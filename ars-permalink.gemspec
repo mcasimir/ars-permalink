@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "ars-permalink"
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["mcasimir"]
@@ -22,8 +22,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "ars-permalink.gemspec",
-    "lib/ars-permalink.rb",
-    "lib/generators/ars-permalink/install_generator.rb"
+    "lib/ars-permalink.rb"
   ]
   s.homepage = "http://github.com/mcasimir/kaminari-bootstrap"
   s.licenses = ["MIT"]
