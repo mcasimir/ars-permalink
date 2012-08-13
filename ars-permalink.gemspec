@@ -17,9 +17,11 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "Gemfile",
+    "Gemfile.lock",
     "README.md",
     "Rakefile",
     "VERSION",
+    "ars-permalink.gemspec",
     "lib/ars-permalink.rb",
     "lib/generators/ars-permalink/install_generator.rb"
   ]
