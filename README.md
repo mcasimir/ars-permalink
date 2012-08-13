@@ -1,6 +1,58 @@
-# Ars-permalink
+# ars-permalink
 
-ActiveRecordSchema permalink gem (based on FriendlyId)
+[ActiveRecordSchema](https://github.com/mcasimir/active_record_schema) permalink with [FriendlyId](https://github.com/norman/friendly_id)
+
+
+## Installation
+
+``` rb
+gem "ars-permalink"
+```
+
+``` sh
+rails g ars-permalink:install
+rake db:migrate
+```
+
+## Usage
+
+Call `#permalink` inside a model
+
+``` rb
+class Post
+  permalink
+
+  field :title
+  
+end
+```
+
+and then run `rails g migration:from` option to let ActiveRecordSchema generate the required migration
+
+_eg._
+
+    rails g migration:from post
+
+### Specify a field to derive permalink
+ 
+``` rb
+class User
+  field :name
+  permalink :name
+  
+end
+```
+
+### Use with history
+
+``` rb
+class Post
+  permalink :history => true
+
+  field :title
+  
+end
+```
 
 ---
 

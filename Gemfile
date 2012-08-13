@@ -1,8 +1,8 @@
 source "http://rubygems.org"
 
 gem 'rails'
+gem 'friendly_id'
 
-group :development do  
-  gem "bundler"
-  gem "jeweler", "~> 1.8.4"
+group :development do
+  gem "jeweler"
 end

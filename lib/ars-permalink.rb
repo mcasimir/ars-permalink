@@ -20,6 +20,25 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-module ArsPermalink
+require 'friendly_id'
 
+module ArsPermalink
+  extend ActiveSupport::Concern
+  
+  module ClassMethods
+    def permalink(method, options = {})
+      use = options[:history] ? :history : :slugged
+      
+      field :slug, :index => { :unique => true }
+      validates :slug, :presence => true, :uniqueness => true
+      
+      if ActiveRecord::Base.connection.table_exists?(self.table_name)
+        self.send :extend, FriendlyId
+        friendly_id method, :use => use        
+      end
+    end
+  end
+  
 end
+
+ActiveRecord::Base.send :include, Permalink
